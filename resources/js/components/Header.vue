@@ -2,10 +2,7 @@
 
     <header class="Header">
 
-        Header Component
-
         <app-nav></app-nav>
-
 
     </header>
 

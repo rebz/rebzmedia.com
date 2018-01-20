@@ -9,4 +9,4 @@ const app = new Vue({
     router
 });
 
-app.$mount("#app")
+app.$mount("#rebz")
