@@ -1,0 +1,16 @@
+.Home {
+
+    &__bg {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-family: "proxima-nova";
+            font-weight: 900;
+            display: flex;
+            font-size: 33.33vh;
+            line-height: 33.33vh;
+            letter-spacing: 2vw;
+        }
+    }
+}

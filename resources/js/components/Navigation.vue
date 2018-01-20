@@ -10,6 +10,10 @@
             Portfolio
         </router-link>
 
+        <router-link :to="{name: 'Playground'}">
+            Playground
+        </router-link>
+
         <button>
             Contact
         </button>
