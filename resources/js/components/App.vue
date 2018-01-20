@@ -2,7 +2,7 @@
 
     <div>
 
-        App.vue
+        <app-header></app-header>
 
         <router-view></router-view>
 

@@ -1,10 +1,10 @@
 <template>
 
-    <header class="Header">
+    <nav class="Navigation">
 
-        header / navigation
+        Navigation Component
 
-    </header>
+    </nav>
 
 </template>
 
