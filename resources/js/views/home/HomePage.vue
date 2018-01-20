@@ -1,10 +1,12 @@
 <template>
 
-    <div>
+    <section class="Home">
 
-        HomePage.vue
+        <h1>Chris Johnson</h1>
 
-    </div>
+        <p>UI / UX / Full-Stack</p>
+
+    </section>
 
 </template>
 

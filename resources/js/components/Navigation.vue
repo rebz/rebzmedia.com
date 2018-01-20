@@ -2,7 +2,17 @@
 
     <nav class="Navigation">
 
-        Navigation Component
+        <router-link :to="{name: 'Home'}">
+            Home
+        </router-link>
+
+        <router-link :to="{name: 'Portfolio'}">
+            Portfolio
+        </router-link>
+
+        <button>
+            Contact
+        </button>
 
     </nav>
 

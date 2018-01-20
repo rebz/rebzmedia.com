@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "../components/App.vue";
 import HomeRoutes from "../views/home/routes";
+import PortfolioRoutes from "../views/portfolio/routes";
 import PageNotFound from "../components/PageNotFound.vue";
 
 window.VueRouter = require("vue-router/dist/vue-router.common");
@@ -24,7 +25,8 @@ const router = new VueRouter({
             path: "",
             component: App,
             children: [
-                ...HomeRoutes
+                ...HomeRoutes,
+                ...PortfolioRoutes
             ]
         },
         {
