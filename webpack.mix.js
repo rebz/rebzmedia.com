@@ -16,8 +16,8 @@ mix
     .sourceMaps()
     .browserSync({
         open: 'external',
-        host: "drive.dev",
-        proxy: "drive.dev",
+        host: "rebzmedia.test",
+        proxy: "rebzmedia.test",
         files: [
             "public/**/*.html",
             "public/js/**/*.js",
@@ -27,9 +27,9 @@ mix
     .webpackConfig({
         resolve : {
             alias : {
-                '@drive.views' : path.join(__dirname, 'resources/js/views'),
-                '@drive.components' : path.join(__dirname, 'resources/js/components'),
-                '@drive.helpers' : path.join(__dirname, 'resources/js/mixins/helpers')
+                '@rebz.views' : path.join(__dirname, 'resources/js/views'),
+                '@rebz.components' : path.join(__dirname, 'resources/js/components'),
+                '@rebz.helpers' : path.join(__dirname, 'resources/js/mixins/helpers')
             }
         }
     })
