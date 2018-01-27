@@ -1,16 +1,112 @@
 .Home {
+    position: relative;
 
-    &__bg {
-        display: flex;
-        flex-direction: column;
+    //min-height: 1280px;
+    //width: 1280px;
+    //margin: 640px auto 0;
+
+    //&:before {
+    //    content: " UI UX FULL STACK \A FULL STACK UI UX \A UI FULL STACK UX  \A UI UX FULL STACK \A";
+    //    white-space: pre;
+    //    display: block;
+    //    margin: -130px auto 0;
+    //    width: 100%;
+    //    height: 700px;
+    //    font-family: Montserrat, sans-serif;
+    //    font-size: 480px;
+    //    font-weight: bold;
+    //    line-height: 390px;
+    //    text-transform: uppercase;
+    //    color: #f7f7f7;
+    //    pointer-events: none;
+    //    user-select: none;
+    //    transform: translateX(-83%);
+    //    animation: slideInBackground 500ms;
+    //}
+
+    $name-padding: 40px;
+    
+    &__name {
+        @include font-size(140px);
+        //letter-spacing: -0.03em;
+        //font-weight: 700; //bold
+        line-height: 80%;
+        color:transparent;
+        position: relative;
+        font-family: $font__title-family;
+        text-shadow: -2px -3px 4px rgba(255, 255, 255, 0.15);
 
         span {
-            font-family: "proxima-nova";
-            font-weight: 900;
-            display: flex;
-            font-size: 33.33vh;
-            line-height: 33.33vh;
-            letter-spacing: 2vw;
+            display: block;
+        }
+
+        &__color {
+            padding: $name-padding;
+            position: relative;
+            z-index: 5;
+            background-image: -webkit-linear-gradient(-134deg, #D994CD 0%, #231A78 100%);
+            background-image: linear-gradient(-134deg, #D994CD 0%, #231A78 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        &__shadow {
+            //text-shadow:
+            //        0 6px 8px rgba(0,0,0,.4),
+            //        0 9px 10px rgba(0,0,0,.15),
+            //        0 30px 10px rgba(0,0,0,.18),
+            //        0 15px 10px rgba(0,0,0,.21);
+            padding: $name-padding;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            text-shadow: 2px 2px 0 #fff;
+
+            &:after {
+                content: 'Chris\AJohnson';
+                position: absolute;
+                padding: $name-padding;
+                top: 5px;
+                left: 5px;
+                z-index: -1;
+                text-shadow: none;
+                background-image:
+                        linear-gradient(
+                                        45deg,
+                                        transparent 45%,
+                                        rgba(0,0,0,.5) 45%,
+                                        rgba(0,0,0,.5) 55%,
+                                        transparent 0
+                        );
+                background-size: .05em .05em;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                animation: shad-anim 15s linear infinite;
+            }
+
         }
     }
+
+    h2 {
+        margin-top: 100px;
+        @include font-size(26px);
+        font-weight: 700;
+        display: flex;
+
+        span {
+            display: flex;
+            padding: 5px;
+        }
+    }
+}
+
+
+
+
+
+@keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
 }

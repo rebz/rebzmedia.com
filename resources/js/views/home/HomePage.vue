@@ -2,22 +2,23 @@
 
     <section class="Home">
 
+        <div class="Home__name">
 
+            <div class="Home__name__color">
+                <span>Chris</span> Johnson
+            </div>
 
-        <div class="Home__bg">
-            <span>UIUX</span>
-            <span></span>
-            <span>FULL</span>
-            <span>STACK</span>
+            <div class="Home__name__shadow">
+                <span>Chris</span> Johnson
+            </div>
+
         </div>
 
-
-
-
-
-        <!--<h1>Chris Johnson</h1>-->
-
-        <!--<h2>UI / UX / Full-Stack</h2>-->
+        <h2>
+            <span>UI</span>
+            <span>UX</span>
+            <span>Full-Stack</span>
+        </h2>
 
         <!--<p>-->
             <!--A <span>developer</span> spending his days hunched over a keyboard to ensure his-->
