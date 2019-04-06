@@ -1,36 +1,14 @@
 <template>
 
-    <section class="Home">
+    <div>
 
-        <div class="Home__name">
+        HomePage.vue
 
-            <div class="Home__name__color">
-                <span>Chris</span> Johnson
-            </div>
+        <br>
 
-            <div class="Home__name__shadow">
-                <span>Chris</span> Johnson
-            </div>
+        {{ item || 'no data' }}
 
-        </div>
-
-        <h2>
-            <span>UI</span>
-            <span>UX</span>
-            <span>Full-Stack</span>
-        </h2>
-
-        <!--<p>-->
-            <!--A <span>developer</span> spending his days hunched over a keyboard to ensure his-->
-            <!--principles and techniques are current with the needs of hipsters.-->
-        <!--</p>-->
-
-        <!--<p>-->
-            <!--A <span>&#45;&#45;&#45;&#45;</span> spending his days hunched over a keyboard to ensure his-->
-            <!--principles and techniques are current with the needs of hipsters.-->
-        <!--</p>-->
-
-    </section>
+    </div>
 
 </template>
 
@@ -39,14 +17,14 @@
 
         data() {
             return {
-                roles: [
-                    'User Interface Designer',
-                    'User Experience Designer',
-                    'Full-Stack Developer',
-                    'Technical Lead'
-                ]
+                item: null
             }
-        }
+        },
 
+        mounted() {
+            axios.get('https://jsonplaceholder.typicode.com/todos/1').then(response => {
+                this.item = response.data
+            })
+        }
     }
 </script>

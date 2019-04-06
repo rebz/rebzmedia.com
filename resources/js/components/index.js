@@ -1,2 +1,3 @@
-Vue.component("AppHeader", require("./Header.vue"))
-Vue.component("AppNav", require("./Navigation.vue"))
+require('./font-awesome')
+
+// Vue.component("ComponentName", require("./Component.vue"))

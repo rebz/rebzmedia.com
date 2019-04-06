@@ -1,10 +1,10 @@
 <template>
 
-    <header class="Header">
+    <nav class="Navigation">
 
-        <app-nav></app-nav>
+        Navigation.vue
 
-    </header>
+    </nav>
 
 </template>
 

@@ -15,10 +15,7 @@ Vue.mixin({
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
 
-        window.addEventListener("resize", () => {
-            this.windowWidth = window.innerWidth
-            this.windowHeight = window.innerHeight
-        })
+        window.addEventListener("resize", this.resize)
     },
     watch: {
         'bodyClass': function (classes) {
@@ -34,6 +31,10 @@ Vue.mixin({
         }
     },
     methods: {
+        resize() {
+            this.windowWidth = window.innerWidth
+            this.windowHeight = window.innerHeight
+        },
         addBodyClass,
         removeBodyClass,
         slugify

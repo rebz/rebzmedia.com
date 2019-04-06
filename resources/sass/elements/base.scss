@@ -1,8 +1,6 @@
-
-/* Base Styles */
 html {
-    font-size:62.5%;
-    min-height:100%;
+    font-size: 62.5%; // https://snook.ca/archives/html_and_css/font-size-with-rem
+    min-height: 100%;
 
     @include html();
 }

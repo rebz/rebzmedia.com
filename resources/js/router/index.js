@@ -1,13 +1,11 @@
-import Vue from "vue";
-import App from "../components/App.vue";
-import HomeRoutes from "../views/home/routes";
-import PortfolioRoutes from "../views/portfolio/routes";
-import PlaygroundRoutes from "../views/playground/routes";
-import PageNotFound from "../components/PageNotFound.vue";
+import Vue from "vue"
+import App from "@components/App"
+import HomeRoutes from "@views/home/routes"
+import PageNotFound from "@views/errors/PageNotFound"
 
-window.VueRouter = require("vue-router/dist/vue-router.common");
+window.VueRouter = require("vue-router/dist/vue-router.common")
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const router = new VueRouter({
     mode: "history",
@@ -26,9 +24,7 @@ const router = new VueRouter({
             path: "",
             component: App,
             children: [
-                ...HomeRoutes,
-                ...PortfolioRoutes,
-                ...PlaygroundRoutes
+                ...HomeRoutes
             ]
         },
         {
@@ -48,10 +44,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if(to.meta && to.meta.title) {
-        document.title = to.meta.title
-    }
     next()
 })
 
-export default router;
+export default router

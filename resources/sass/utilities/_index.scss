@@ -1,8 +1,3 @@
-.wrap {
-    max-width: $body__width--desktop;
-    margin: 0 auto;
-    @extend %clearfix;
-}
 .al {text-align: left;}
 .ac {text-align: center;}
 .ar {text-align: right;}
@@ -17,6 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-
     width: 100%;
 }
+
+@import "Wrap";

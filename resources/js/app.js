@@ -1,12 +1,14 @@
-require("./mixins");
+require('@mixins/global')
 
 import router from "./router";
+import store from "./store";
 
 require("./bootstrap");
 require("./components");
 
 const app = new Vue({
-    router
+    router,
+    store
 });
 
-app.$mount("#rebz")
+app.$mount("#app")

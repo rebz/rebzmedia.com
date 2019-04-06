@@ -43,61 +43,26 @@
     }
 }
 
-@mixin animation($str...) {
-    -webkit-animation: #{$str};
-    -moz-animation: #{$str};
-    -ms-animation: #{$str};
-    -o-animation: #{$str};
-    animation: #{$str};
-}
-
-@mixin transition($args...) {
-    -webkit-transition: $args;
-    -moz-transition: $args;
-    -ms-transition: $args;
-    -o-transition: $args;
-    transition: $args;
-}
-
-@mixin opacity($opacity) {
-    opacity: $opacity;
-    $opacity-ie: $opacity * 100;
-    filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
-}
-
-/* Gradient: Top to Bottom */
-@mixin gradient-t2b($start-colour, $end-colour) {
-    background-color: $start-colour;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
-    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
-    background-image:    -moz-linear-gradient(top, $start-colour, $end-colour);
-    background-image:     -ms-linear-gradient(top, $start-colour, $end-colour);
-    background-image:      -o-linear-gradient(top, $start-colour, $end-colour);
-    background-image:         linear-gradient(top, $start-colour, $end-colour);
-    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
-}
-
 @mixin phone() {
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: $phone) {
+        @content
+    }
+}
+
+@mixin mobile() {
+    @media screen and (max-width: $mobile) {
         @content
     }
 }
 
 @mixin tablet() {
-    @media screen and (max-width: $body__width--tablet) {
+    @media screen and (max-width: $tablet) {
         @content
     }
 }
 
 @mixin desktop() {
-    @media screen and (min-width: $body__width--desktop) {
+    @media screen and (min-width: $desktop) {
         @content
     }
 }

@@ -1,9 +1,9 @@
-import HomePage from "./HomePage.vue";
+import HomePage from "./HomePage"
 
 export default [
     {
         path: "",
-        name: "Home",
+        name: "home",
         components: {
             default: HomePage
         }
