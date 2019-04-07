@@ -1,5 +1,5 @@
 # What is this repo? #
-Website for [rebzmedia.com](rebzmedia.com) using the [clean-slate](https://github.com/rebz/clean-slate) repo as the starting point.
+Website for [rebzmedia.com](http://rebzmedia.com) using the [clean-slate](https://github.com/rebz/clean-slate) repo as the starting point.
 
 ---
 
