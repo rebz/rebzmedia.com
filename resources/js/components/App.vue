@@ -1,10 +1,24 @@
 <template>
 
-    <div>
+    <div class="Container">
 
-        App.vue
+        <div class="AppGrid">
 
-        <navigation></navigation>
+            <div class="AppGrid__con">
+
+                <div class="AppGrid__col" v-for="n in 7">
+
+                    <app-grid-item></app-grid-item>
+
+                    <app-grid-item></app-grid-item>
+
+                    <app-grid-item></app-grid-item>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <router-view></router-view>
 
@@ -13,14 +27,11 @@
 </template>
 
 <script>
-    import Navigation from '@views/layout/Navigation'
+    import AppGridItem from './AppGridItem'
 
     export default {
         components: {
-            Navigation
-        },
-        mounted() {
-            console.info('App.vue mounted... congrats!')
+            AppGridItem
         }
     }
 </script>

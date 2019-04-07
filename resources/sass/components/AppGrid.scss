@@ -1,0 +1,109 @@
+$appGridGap: 4rem;
+
+.AppGrid {
+    max-width: 1280px;
+    transform: translateX(-45%) translateY(-34%);
+
+
+    &__con {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: $appGridGap;
+        //grid-template-rows: 50px 5em min-content auto;
+
+        transform-style: preserve-3d;
+        //transform: rotateX(65.942deg) rotateZ(-39.7768deg) translateZ(-50px);
+        transform: rotateX(57.6812deg) rotateZ(-44.396deg) translateZ(-50px);
+    }
+
+    &__col {
+        transform-style: preserve-3d;
+
+        &:nth-child(1) {
+            transform: translateY(-200px);
+        }
+
+        &:nth-child(2) {
+            transform: translateY(0px);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(100px);
+        }
+
+        &:nth-child(4) {
+            transform: translateY(-200px);
+        }
+
+        &:nth-child(5) {
+            transform: translateY(-20px);
+        }
+
+        &:nth-child(6) {
+            transform: translateY(110px);
+        }
+
+        &:nth-child(7) {
+            transform: translateY(-90px);
+        }
+    }
+
+    &__item {
+        height: 400.2px;
+        width: 225px;
+        margin: $appGridGap 0;
+        list-style-type: none;
+        transform-style: preserve-3d;
+        transform: translateZ(50px);
+
+        &__left,
+        &__bottom,
+        &__right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            background-size: cover;
+        }
+
+        &__left {
+            transform-origin: left center;
+            transform: rotateY(90deg);
+            width: 5px;
+        }
+
+        &__bottom {
+            transform-origin: bottom center;
+            transform: rotateX(90deg);
+            height: 5px;
+            top: auto;
+            bottom: 0;
+            background-position: bottom center;
+        }
+
+        &__right {
+            transform-origin: right center;
+            transform: rotateY(-90deg);
+            width: 5px;
+            left: auto;
+            right: 0;
+            background-position: right center;
+        }
+
+        &__shadow {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            right: 40px;
+            bottom: 40px;
+            background-color: rgba(0,0,0,0.5);
+            box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+            transform: translateZ(-30px);
+             //box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.25),
+             //            0px 25px 40px -35px rgba(0, 0, 0, 0.5);
+
+        }
+    }
+}
