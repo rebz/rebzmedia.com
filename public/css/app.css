@@ -695,6 +695,128 @@ hr {
  *  are often composed of Objects and Components.
  */
 
+.AppGrid {
+  max-width: 1280px;
+  max-height: 810px;
+  background: red;
+  overflow: hidden;
+}
+
+.AppGrid__con {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 4rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(57.6812deg) rotateZ(-44.396deg) translateZ(-50px);
+          transform: rotateX(57.6812deg) rotateZ(-44.396deg) translateZ(-50px);
+}
+
+.AppGrid__col {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.AppGrid__col:nth-child(1) {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+.AppGrid__col:nth-child(2) {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.AppGrid__col:nth-child(3) {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.AppGrid__col:nth-child(4) {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+.AppGrid__col:nth-child(5) {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.AppGrid__col:nth-child(6) {
+  -webkit-transform: translateY(110px);
+          transform: translateY(110px);
+}
+
+.AppGrid__col:nth-child(7) {
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
+}
+
+.AppGrid__item {
+  height: 400.2px;
+  width: 225px;
+  margin-top: 4rem;
+  list-style-type: none;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+}
+
+.AppGrid__item__left,
+.AppGrid__item__bottom,
+.AppGrid__item__right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  background-size: cover;
+}
+
+.AppGrid__item__left {
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  width: 5px;
+}
+
+.AppGrid__item__bottom {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  height: 5px;
+  top: auto;
+  bottom: 0;
+  background-position: bottom center;
+}
+
+.AppGrid__item__right {
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+  width: 5px;
+  left: auto;
+  right: 0;
+  background-position: right center;
+}
+
+.AppGrid__item__shadow {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateZ(-30px);
+          transform: translateZ(-30px);
+}
+
 /*
  *  Helper classes with ability to override
  *  anything which goes before in the
