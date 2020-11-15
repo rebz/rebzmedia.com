@@ -2,8 +2,6 @@
 
     <div>
 
-        App.vue
-
         <navigation></navigation>
 
         <router-view></router-view>
@@ -20,7 +18,6 @@
             Navigation
         },
         mounted() {
-            console.info('App.vue mounted... congrats!')
         }
     }
 </script>

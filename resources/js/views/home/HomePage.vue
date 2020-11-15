@@ -2,11 +2,91 @@
 
     <div>
 
-        HomePage.vue
+        <div class="masonry">
+            <div class="item">
+                <div class="item__content">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--small">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--medium">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--small">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--medium">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--large">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--medium">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--small">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--large">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--small">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--large">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--medium">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--small">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--medium">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content">
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__content item__content--small">
+                </div>
+            </div>
+        </div>
+
+
 
         <br>
-
-        {{ item || 'no data' }}
+        <br>
+        <br>
+        <br>
 
     </div>
 
@@ -14,17 +94,5 @@
 
 <script>
     export default {
-
-        data() {
-            return {
-                item: null
-            }
-        },
-
-        mounted() {
-            axios.get('https://jsonplaceholder.typicode.com/todos/1').then(response => {
-                this.item = response.data
-            })
-        }
     }
 </script>

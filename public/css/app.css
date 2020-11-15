@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  *  Methodologies for this Project
  *
@@ -512,6 +514,98 @@ hr {
  *  design patterns, for example media object
  *  known from OOCSS.
  */
+
+.masonry {
+  -webkit-column-count: 5;
+          column-count: 5;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  counter-reset: item-counter;
+}
+
+.item {
+  box-sizing: border-box;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+  padding: 10px;
+  counter-increment: item-counter;
+}
+
+.item__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  font-size: 40px;
+  color: #360007;
+  background: currentColor;
+  box-sizing: border-box;
+  color: #720026;
+}
+
+.item__content:hover {
+  background: #9b0034;
+}
+
+.item__content:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-weight: bold;
+  background-color: #222;
+  content: counter(item-counter);
+}
+
+.item__content:after {
+  color: #1c0004;
+  content: "\CA0\203F\CA0";
+}
+
+.item__content--small {
+  color: #CE4257;
+  height: 100px;
+}
+
+.item__content--small:hover {
+  background: #d66274;
+}
+
+.item__content--small:after {
+  content: "\2665\25E1\2665";
+}
+
+.item__content--medium {
+  color: #FFC093;
+  height: 175px;
+}
+
+.item__content--medium:hover {
+  background: #ffd8bc;
+}
+
+.item__content--medium:after {
+  content: "\25D4\1D17\25D4";
+}
+
+.item__content--large {
+  color: #FF7F51;
+  height: 280px;
+}
+
+.item__content--large:hover {
+  background: #ff9d7a;
+}
+
+.item__content--large:after {
+  content: "\CA0_\E4F";
+}
 
 /*
  *  Plugin overrides.
